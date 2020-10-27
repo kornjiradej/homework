@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    .menu {
+        text-align: center;
+        img {
+            margin: auto;
+        }
+        p {
+            margin: auto;
+            font-size: 8px;
+            font-weight: 300;
+            letter-spacing: .4px;
+            color: #d0caca;
+        }
+    }
+}

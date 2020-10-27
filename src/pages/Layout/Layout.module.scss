@@ -11,7 +11,9 @@
         z-index: 100;
     }
     .navbar {
-        height: 63px;
+        background-color: white;
+        padding: 14px 27px 18px 27px;
+        // height: 63px;
         bottom: 0;
         overflow: hidden;  
         position: -webkit-sticky; /* Safari */
