@@ -1,0 +1,21 @@
+.layout {
+    position: relative;
+    .header {
+        background-color: #3766ff;
+        padding: 17px;
+        height: 111px;
+        overflow: hidden; 
+        top: 0;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        z-index: 100;
+    }
+    .navbar {
+        height: 63px;
+        bottom: 0;
+        overflow: hidden;  
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        z-index: 100;
+    }
+}
