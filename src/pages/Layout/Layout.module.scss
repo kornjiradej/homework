@@ -25,5 +25,9 @@
         width: 100%;
         height: 1px;
         background-color: #d0caca;
+        bottom: 0;
+        overflow: hidden;  
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
     }
 }

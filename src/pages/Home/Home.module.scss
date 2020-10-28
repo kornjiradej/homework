@@ -20,9 +20,8 @@
     }
  
     .date_container {
-        .menu {
-            height: 120px;
-            padding: 15px;
+        padding: 10px;
+        .menu { 
             display: flex;
             justify-content: space-between;
             .icon {
@@ -42,7 +41,44 @@
             } 
         }
         .date {
+            margin-top: 10px;
+            width: 100%;
             display: flex;
+            justify-content: space-between;
+            .date_div {
+                width: 100%;
+                display: flex; 
+                // justify-content: space-between;
+                .carousel_container {
+                    min-width: 200px;
+                    max-height: 27px;
+                    .arrow {
+                        color: red;
+                        font-size: 20px;
+                    }
+                }
+                .date_item {
+                    margin-right: 8px;
+                    min-width: 27px;
+                    width: 27px;
+                    height: 27px;
+                    color: white;
+                    text-align: center;
+                    background: #3766ff;
+                    border-radius: 50%; 
+                }
+                .date_item_arrow {
+                    margin-right: 12px;
+                    min-width: 27px;
+                    width: 27px;
+                    height: 27px;
+                    text-align: center;
+                    span {
+                        color: #d0caca;
+                    }
+                    // padding: 9px;
+                } 
+            }
             .text_div {
                 width: 46px;
                 height: 46px;
