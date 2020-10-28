@@ -1,28 +1,38 @@
 .header {
-    width: 100%;  
+    width: 100%;
     z-index: 10;
     position: relative;
-    margin-top: 80px;
+    margin-top: 50px;
+
     // bottom: 17px;
-    .header_bar { 
+    .header_bar {
         width: 100%;
         display: flex;
         justify-content: space-between;
+
         span {
             font-size: 18px;
             font-weight: 500;
             color: #ffffff;
         }
+
         .text_center_header {
             display: flex;
-            position: relative; 
+            position: relative;
+
+            span {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
             .down_arrow {
                 position: absolute;
                 right: -65px;
+
                 img {
                     margin: auto;
                 }
             }
-        } 
+        }
     }
 }
