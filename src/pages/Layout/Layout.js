@@ -3,8 +3,7 @@ import Header from "../Header/Header";
 import Navbar from "../Navbar/Navbar";
 import styles from "./Layout.module.scss";
 
-const Layout = (props) => {
-  console.log("props ", props);
+const Layout = (props) => { 
   return (
     <div className={styles.layout}>
       <div className={styles.header}>
