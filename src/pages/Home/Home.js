@@ -1,21 +1,51 @@
-import React, { useEffect, useState } from "react";
-import styles from "./Home.module.scss";
+import React, { useEffect, useState } from "react"; 
 import { Tabs, Carousel } from "antd";
+import * as moment from 'moment'
+import { DownOutlined, UploadOutlined, 
+  LikeOutlined, CommentOutlined,
+  GiftOutlined, SketchOutlined } from '@ant-design/icons'
+import styles from "./Home.module.scss";
 import GraphIcon from "../../assets/icons/graph_icon.svg";
 import GraphIconSelected from "../../assets/icons/graph_icon_selected.svg";
 import ListIcon from "../../assets/icons/list_icon.svg";
 import ListIconSelected from "../../assets/icons/list_icon_selected.svg";
-import * as moment from 'moment'
-
+ 
 const { TabPane } = Tabs;
 
 const Home = () => {
+  const [menu, setMenu] = useState(0)
   const [viewMode, setViewMode] = useState(0);
   const [carousel, setCarousel] = useState(null);
   const [daySelected, setDaySelected] = useState(-1)
-  const [ subScribeDidMount, setSubScribeDidMount ] = useState(false)
-  const [ month, setMonth ] = useState([])
+  const [subScribeDidMount, setSubScribeDidMount] = useState(false)
+  const [month, setMonth] = useState([])
   const toDay = moment().format('DD') 
+  const dashboardData = [
+    {
+      icon: <LikeOutlined className={styles.icon} />,
+      title: 'Like' ,
+      num: 34,
+      descript: 'Likes'
+    },
+    {
+      icon: <CommentOutlined className={styles.icon}/>,
+      title: 'Comment' ,
+      num: 34,
+      descript: 'Comments'
+    },
+    {
+      icon: <GiftOutlined className={styles.icon}/>,
+      title: 'Point' ,
+      num: 34,
+      descript: 'Points'
+    },
+    {
+      icon: <SketchOutlined className={styles.icon}/>,
+      title: 'Diamond' ,
+      num: 34,
+      descript: 'Diamond'
+    },
+  ]
   useEffect(() => {
     const getDaysArrayByMonth = () => {
       var daysInMonth = moment().daysInMonth(); 
@@ -61,9 +91,14 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.home_menu}>
-        <span>Submission</span>
-        <div className={styles.vertical_line} />
-        <span>Engagement</span>
+        <span 
+          onClick={() => setMenu(0)}
+          style={menu === 0 ? { color: '#3766ff' } : {}}>
+          Submission
+          </span>
+        <div className={styles.vertical_line}  />
+          <span onClick={() => setMenu(1)}
+          style={menu === 1 ? { color: '#3766ff' } : {}}>Engagement</span>
       </div>
       <div className={styles.divided} />
       <div className={styles.date_container}>
@@ -149,6 +184,39 @@ const Home = () => {
               <span className={styles.text_today}>↓Today</span>
             </div>
           </div>
+        </div> 
+      </div>
+       
+        <div className={styles.load_more}> 
+          <div className={styles.divided} />
+          <div className={styles.divided_load_more}>
+            <div className={styles.inside}>
+              <div className={styles.down_arrow}>
+                <DownOutlined />
+              </div>
+            </div>
+          </div> 
+        </div>
+      <div className={styles.dashboard_container}>
+        <div className={styles.header}>
+              <span>{`${daySelected < 1 ? '' : daySelected} ${moment().format('MMMM')} ${moment().format('YYYY')}`}</span>
+          <UploadOutlined className={styles.icon} />
+        </div>
+        <div className={styles.card_list}>
+          {
+            dashboardData.map((d,i) => {
+              return (
+                <div className={styles.card} key={i}>
+                  <div className={styles.title}>
+                    { d.icon }
+                    <span >{ d.title }</span>
+                  </div> 
+                  <span className={styles.num}>{d.num}</span ><br/>
+                  <span className={styles.descript}>{d.descript}</span>
+                </div>
+              )
+            })
+          }
         </div>
       </div>
     </div>
