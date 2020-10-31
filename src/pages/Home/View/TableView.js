@@ -10,6 +10,7 @@ import UserIcon from '../../../assets/icons/user_icon.svg'
 
 const TableView = (props) => {
   const { viewMode } = props
+  // console.log('props ',props)
   const [ selectedMenu, setSelectedMenu ] = useState(0)
     const listMenu = [
         {
@@ -282,7 +283,7 @@ const TableView = (props) => {
              {
                listDataLike.map((l,i) => {
                  return (
-                   <div className={styles.list_item}>
+                   <div key={i} onClick={() => props.props.history.push('/detail', { data: l })} className={styles.list_item}>
                      <div className={styles.range}><span>{i+1}</span></div>
                       <div className={styles.list_detail}>
                         <div className={styles.left}>

@@ -9,7 +9,10 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-
+        .go_back_text {
+            font-size: 13px;
+            font-weight: 300;
+        }
         span {
             font-size: 18px;
             font-weight: 500;
@@ -33,6 +36,11 @@
                     margin: auto;
                 }
             }
+        }
+        .text_header {
+            font-size: 18px;
+            font-weight: 500;
+            color: #ffffff;
         }
     }
 }

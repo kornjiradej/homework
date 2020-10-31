@@ -1,0 +1,204 @@
+.detail_container { 
+    .container {
+        padding: 20px 15px;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+            display: flex;
+            img {
+                width: 36px;
+                height: 36px;
+                margin: 5px 10px 0 0;
+            }
+            .text_left {
+                p {
+                    margin-bottom: 0px;
+                }
+                .name {
+                    font-size: 15px;
+                    color:  #28283c;
+                }
+                .career {
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: #28283c;
+                }
+            }
+        }
+        .right {
+            text-align: right;
+            .icon {
+                margin-right: 2px;
+            }
+            p {
+                font-size: 10px;
+                letter-spacing: .75px;
+                color: #929292;
+            }
+        }
+    }
+    .content_container {
+        margin-top: 25px;
+        p {
+            margin-bottom: 0px;
+        }
+        .title {
+            font-size: 13px;
+            font-weight: 300;
+            color: #929292;
+        }
+        .content {
+            font-size: 13px;
+            font-weight: 300;
+            color: #28283c;
+        }
+    }
+    .image_container {
+        margin-top: 25px;
+        p {
+            margin-bottom: 9px;
+            font-size: 13px;
+            font-weight: 300;
+            color: #939393;
+        } 
+        .image_list {
+            display: flex;
+            .image_item { 
+                margin-right: 7px;
+            }
+        }
+        
+    }
+    .attach_container {
+        margin-top: 25px;
+        p {
+            margin-bottom: 9px;
+            font-size: 13px;
+            font-weight: 300;
+            color: #939393;
+        } 
+        .clip_icon {
+            color:  #939393;
+            font-size: 12px;
+            margin-right: 2px;
+        }
+        .paper_clip_text {
+            font-size: 16px;
+            font-weight: 300;
+            color: #3766ff;
+        }
+    }
+    .status_container {
+        width: 100%;
+        height: 36px;
+        padding: 8px 13px;
+        background-color: rgba(55, 156, 255, .15);
+        display: flex;
+        justify-content: space-between;
+        .left {
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+            span {
+                font-size: 12px;
+                font-weight: 300;
+                color: #939393;
+            }
+        }
+        .right {
+            span {
+                font-size: 13px;
+                font-weight: 300;
+                color: #3766ff;
+            }
+        }
+    }
+    .action_container {
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        button {
+            width: 147px;
+            height: 33px;
+            border: 1px solid #3766ff;
+            border-radius: 14.5px;
+            color: #3766ff;
+        }
+    }
+    .line_horizontal {
+        height: 1px;
+        width: 100%;
+        background:   #d0caca;
+    }
+    .comment_container {
+        padding: 20px 15px;
+        .header_comment {
+            display: flex;
+            p {
+                margin-bottom: 0px;
+            }
+            img {
+                width: 27px;
+                height: 27px;
+                
+            }
+            .text {
+                margin-left: 10px; 
+                .name { 
+                    font-size: 11px;
+                    color: #28283c;
+                }
+                .career {
+                    font-size: 8px;
+                    font-weight: 300;
+                    color: #28283c;
+                }
+            }
+        }
+        .comment_text {
+            font-size: 15px;
+            font-weight: 300;
+            color: #28283c;
+            margin-top: 10px;
+        }
+        .detail {
+            display: flex;
+            justify-content: space-between;
+            // margin-top: 20px;
+            .left , .right {
+                width: 50%; 
+            }
+            .left {
+                .text1 {
+                    margin-right: 20px;
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: #939393;
+                }
+                .text2 {
+                    font-size: 11px;
+                    font-weight: 300;
+                    color: #78addc;
+                }
+            }
+            .right {
+                text-align: right;
+                .icon {
+                    margin-right: 2px;
+                }
+                span {
+                    font-size: 11px;
+                    font-weight: 300;
+                    color: #3766ff;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .line_horizontal {
+            margin-bottom: 20px;
+        }
+    }
+}

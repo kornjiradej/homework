@@ -21,4 +21,16 @@
         }
     }
 
+    .comment_bar {
+        padding: 29px 24px;
+        display: flex;
+        justify-content: space-around;
+        .input_comment {
+            border-radius: 14.442px;
+            border: .5px solid #939393;
+            width: 199px;
+            height: 49px;
+            // overflow: hidden;
+        }
+    }
 }

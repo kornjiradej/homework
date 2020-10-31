@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import Layout from "./pages/Layout/Layout";
 
 import Home from "./pages/Home/Home";
+import Detail from './pages/Detail/Detail'
 
 const RouteLayout = ({ component: Component }) => {
   return (
@@ -23,6 +24,7 @@ const AppRouter = () => {
     <BrowserRouter>
       <Switch>
         <RouteLayout exact path="/home" component={Home} />
+        <RouteLayout exact path="/detail" component={Detail} /> 
         <Redirect to="/home" />
       </Switch>
     </BrowserRouter>

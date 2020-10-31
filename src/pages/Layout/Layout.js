@@ -3,16 +3,16 @@ import Header from "../Header/Header";
 import Navbar from "../Navbar/Navbar";
 import styles from "./Layout.module.scss";
 
-const Layout = (props) => { 
+const Layout = (props) => {  
   return (
     <div className={styles.layout}>
       <div className={styles.header}>
-        <Header />
+        <Header props={props.children.props}/>
       </div>
       {props.children}
       <div className={styles.divided} />
       <div className={styles.navbar}>
-        <Navbar />
+        <Navbar props={props.children.props}/>
       </div>
     </div>
   );

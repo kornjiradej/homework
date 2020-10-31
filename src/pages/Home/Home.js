@@ -14,7 +14,7 @@ import TableView from './View/TableView'
 
 const { TabPane } = Tabs;
 
-const Home = () => {
+const Home = (props) => {
   const [menu, setMenu] = useState(0)
   const [viewMode, setViewMode] = useState(0);
   const [dataType,setDataType] = useState('1')
@@ -257,7 +257,7 @@ const Home = () => {
         </div> 
         {
           dataType === '1' ?
-          <GraphView data={dashboardData}/>  : <TableView viewMode={viewMode}/>
+          <GraphView data={dashboardData}/>  : <TableView viewMode={viewMode} props={props}/>
         }
       </div>
     </div>
