@@ -42,6 +42,7 @@
             } 
         }
         .date {
+            position: relative;
             margin-top: 10px;
             width: 100%;
             display: flex;
@@ -68,6 +69,7 @@
                     border-radius: 50%;
                     position: relative;
                 }
+                
                 .date_item_arrow {
                     margin-right: 12px;
                     min-width: 27px;
@@ -89,7 +91,22 @@
                     color: #3766ff; 
                 }
             }
-            
+            .high_light {
+                position: absolute;
+                height: 20px;
+                width: 250px;
+                background: rgba(55, 156, 255, .18);
+                border: 2px ;
+                top: 3px;
+                left: 30px;
+                // right: 3px;
+                border-radius: 25px;
+                // .background_div {
+                //     width: 100%;
+                //     background: rgba(55, 156, 255, .18);
+                //     border-radius: 50%;
+                // }
+            }
         }
     } 
     .load_more {
@@ -198,5 +215,67 @@
     }
     .graph_container { 
         height: 300px; 
+    }
+    .table_container {
+        width: 100%;
+        margin-top: 20px;
+        .list_item {
+            display: flex;
+            margin-bottom: 8px;
+            .range {
+                margin-top: 10px;
+                margin-right: 10px;
+                padding: 0px 7px;
+                color: white;
+                min-width: 22px;
+                min-height: 22px;
+                width:22px;
+                height: 22px;
+                border-radius: 50%;
+                background-color: black;
+            }
+            .list_detail {
+                display: flex;
+                justify-content: space-between;
+                padding: 9px 7px;
+                border: 1px solid #d0caca;
+                border-radius: 4.5px;
+                height: 44px;
+                width: 316px;
+                .left {
+                    display: flex;
+                    .text_content {
+                        margin-left: 7px; 
+                        .text1, .text2 {
+                            margin-bottom: 0em;
+                        }
+                        .text1 {
+                            font-size: 9px;
+                        }
+                        .text2 {
+                            font-size: 7px;
+                        }
+                    }
+                }
+                .right {
+                    display: flex;
+                    .divider {
+                        margin-right: 10px;
+                        height: 100%;
+                        width: 1px;
+                        background-color: black;
+                    } 
+                    .icon {
+                        color: #3766ff;
+                        margin-top: 3px;   
+                        margin-right: 5px;  
+                    }
+                    .text3 {
+                        font-size: 8px;
+                        margin-top: 5px; 
+                    }
+                }
+            }
+        }
     }
 }

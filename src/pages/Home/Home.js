@@ -16,7 +16,8 @@ const { TabPane } = Tabs;
 
 const Home = () => {
   const [menu, setMenu] = useState(0)
-  const [viewMode, setViewMode] = useState(1);
+  const [viewMode, setViewMode] = useState(0);
+  const [dataType,setDataType] = useState('1')
   const [carousel, setCarousel] = useState(null);
   const [daySelected, setDaySelected] = useState(-1)
   const [subScribeDidMount, setSubScribeDidMount] = useState(false)
@@ -65,8 +66,12 @@ const Home = () => {
     } 
     
   },[carousel, month, subScribeDidMount, toDay])
-  const callback = (key) => { 
+  const onChangeTab = (key) => {  
+    if(key !== 3) {
+      setDataType(key)
+    } 
   }  
+  console.log('dataType ',dataType)
   const onGoto = () => carousel.goTo(toDay)
   const onNext = () => carousel.next()
   const onPrev = () => carousel.prev()
@@ -105,7 +110,7 @@ const Home = () => {
       <div className={styles.divided} />
       <div className={styles.date_container}>
         <div className={styles.menu}>
-          <Tabs defaultActiveKey="1" onChange={callback}>
+          <Tabs defaultActiveKey="1" onChange={onChangeTab}>
             <TabPane tab="Daily" key="1" />
             <TabPane tab="Weekly" key="2" />
             <TabPane tab="Monthly" key="3" />
@@ -124,7 +129,9 @@ const Home = () => {
           </div>
         </div>
         <div className={styles.date}>
-          <div className={styles.date_div}>
+          {
+            dataType === '1' ? 
+            <div className={styles.date_div}>
             <div onClick={onPrev} className={styles.date_item_arrow} >
               <span>{"<"}</span> 
             </div>
@@ -185,7 +192,51 @@ const Home = () => {
             <div onClick={onGoto} className={styles.text_div}>
               <span className={styles.text_today}>↓Today</span>
             </div>
+          </div> : 
+          <div className={styles.date_div}>
+          <div onClick={onPrev} className={styles.date_item_arrow} >
+            <span>{"<"}</span> 
           </div>
+          <div className={styles.carousel_container}>
+            <Carousel
+              ref={(node) => { 
+                setCarousel(node)
+              }} 
+              slidesToScroll={7}
+              slidesToShow={7}
+              swipeToSlide={true}
+              dots={false}
+              draggable={true}
+              infinite={false} 
+            >
+              {month.map((data, i) => {  
+                return (
+                  <div key={i} >
+                    <div 
+                   className={styles.date_item}
+                   onClick={() => { 
+                    setDaySelected(data)
+                  }}
+                   >
+                    <div style={styleUnSelectDay}>
+                      <span>{data}</span>  
+                    </div>
+                  </div>
+                  </div>
+                );
+              })}  
+            </Carousel>
+            <div className={styles.high_light}/>
+          </div>
+          <div onClick={onNext} className={styles.date_item_arrow} >
+            <span>{">"}</span>
+          </div>
+          <div onClick={onGoto} className={styles.text_div}>
+            <span className={styles.text_today}>↓Today</span>
+          </div>
+        </div>
+          }
+          
         </div> 
       </div>
        
@@ -205,8 +256,8 @@ const Home = () => {
           <UploadOutlined className={styles.icon} />
         </div> 
         {
-          viewMode === 0 ?
-          <GraphView data={dashboardData}/>  : <TableView/>
+          dataType === '1' ?
+          <GraphView data={dashboardData}/>  : <TableView viewMode={viewMode}/>
         }
       </div>
     </div>
