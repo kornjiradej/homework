@@ -175,3 +175,28 @@
         }
     }
 }
+.table_view {
+    width: 100%;
+    margin-top: 15px;
+    .menu_container {
+        display: flex;
+        // justify-content: space-between;
+        .menu_item {
+            padding: 0px 7px;
+            margin-right: 5px;
+            border-radius: 14.5px; 
+            height: 29px; 
+            .icon {
+                font-size: 12px;
+                margin-right: 0px;
+            }
+            span {
+                font-size: 12px;
+
+            }
+        }
+    }
+    .graph_container { 
+        height: 300px; 
+    }
+}

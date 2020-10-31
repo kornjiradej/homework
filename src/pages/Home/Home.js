@@ -9,12 +9,14 @@ import GraphIcon from "../../assets/icons/graph_icon.svg";
 import GraphIconSelected from "../../assets/icons/graph_icon_selected.svg";
 import ListIcon from "../../assets/icons/list_icon.svg";
 import ListIconSelected from "../../assets/icons/list_icon_selected.svg";
- 
+import GraphView from './View/GraphView'
+import TableView from './View/TableView'
+
 const { TabPane } = Tabs;
 
 const Home = () => {
   const [menu, setMenu] = useState(0)
-  const [viewMode, setViewMode] = useState(0);
+  const [viewMode, setViewMode] = useState(1);
   const [carousel, setCarousel] = useState(null);
   const [daySelected, setDaySelected] = useState(-1)
   const [subScribeDidMount, setSubScribeDidMount] = useState(false)
@@ -201,23 +203,11 @@ const Home = () => {
         <div className={styles.header}>
               <span>{`${daySelected < 1 ? '' : daySelected} ${moment().format('MMMM')} ${moment().format('YYYY')}`}</span>
           <UploadOutlined className={styles.icon} />
-        </div>
-        <div className={styles.card_list}>
-          {
-            dashboardData.map((d,i) => {
-              return (
-                <div className={styles.card} key={i}>
-                  <div className={styles.title}>
-                    { d.icon }
-                    <span >{ d.title }</span>
-                  </div> 
-                  <span className={styles.num}>{d.num}</span ><br/>
-                  <span className={styles.descript}>{d.descript}</span>
-                </div>
-              )
-            })
-          }
-        </div>
+        </div> 
+        {
+          viewMode === 0 ?
+          <GraphView data={dashboardData}/>  : <TableView/>
+        }
       </div>
     </div>
   );
