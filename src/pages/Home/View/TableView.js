@@ -9,8 +9,7 @@ import styles from '../Home.module.scss'
 import UserIcon from '../../../assets/icons/user_icon.svg'
 
 const TableView = (props) => {
-  const { viewMode } = props
-  // console.log('props ',props)
+  const { viewMode } = props 
   const [ selectedMenu, setSelectedMenu ] = useState(0)
     const listMenu = [
         {

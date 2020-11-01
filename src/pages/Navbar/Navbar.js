@@ -11,8 +11,7 @@ import ClipIcon from '../../assets/icons/clip_icon.svg'
 import AssignIcon from '../../assets/icons/assign_icon.svg'
 // assign_icon
 const Navbar = (props) => {
-  const { location } = props.props
-  console.log('location ',location.pathname)
+  const { location } = props.props 
   return (
     <Fragment>
       {

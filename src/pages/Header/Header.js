@@ -5,8 +5,7 @@ import MenuIcon from "../../assets/icons/menu_icon.svg";
 import DownArrow from "../../assets/icons/down_arrow_icon.svg";
 
 const Header = (props) => {
-  const { location, history } = props.props
-  console.log('header ',location.pathname)
+  const { location, history } = props.props 
   const isHomePage = location.pathname === '/home' ? true : false
   const onGoBack = () => history.push('/home')
   return (

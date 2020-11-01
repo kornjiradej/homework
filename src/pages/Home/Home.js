@@ -70,8 +70,7 @@ const Home = (props) => {
     if(key !== 3) {
       setDataType(key)
     } 
-  }  
-  console.log('dataType ',dataType)
+  }   
   const onGoto = () => carousel.goTo(toDay)
   const onNext = () => carousel.next()
   const onPrev = () => carousel.prev()

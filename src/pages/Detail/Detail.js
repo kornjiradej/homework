@@ -8,8 +8,7 @@ import { CalendarFilled, ClockCircleFilled,CommentOutlined,
 } from '@ant-design/icons'
 
 const Detail = (props) => {
-    const { data } = props.location.state
-    console.log('data ',data)
+    const { data } = props.location.state 
     const content = [
         {
             title: 'Content 1',
