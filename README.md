@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##DEMO : https://kornjiradej.github.io/homework/
+DEMO : https://kornjiradej.github.io/homework/
 
 ## Available Scripts
 
