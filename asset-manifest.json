@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/homework/static/css/main.f0bfa2fd.chunk.css",
+    "main.css": "/homework/static/css/main.a1bd201b.chunk.css",
     "main.js": "/homework/static/js/main.bdaf7294.chunk.js",
     "main.js.map": "/homework/static/js/main.bdaf7294.chunk.js.map",
     "runtime-main.js": "/homework/static/js/runtime-main.34e697db.js",
@@ -12,7 +12,7 @@
     "static/js/3.a7199ef8.chunk.js.map": "/homework/static/js/3.a7199ef8.chunk.js.map",
     "index.html": "/homework/index.html",
     "static/css/2.feeebe11.chunk.css.map": "/homework/static/css/2.feeebe11.chunk.css.map",
-    "static/css/main.f0bfa2fd.chunk.css.map": "/homework/static/css/main.f0bfa2fd.chunk.css.map",
+    "static/css/main.a1bd201b.chunk.css.map": "/homework/static/css/main.a1bd201b.chunk.css.map",
     "static/js/2.04fb9d6a.chunk.js.LICENSE.txt": "/homework/static/js/2.04fb9d6a.chunk.js.LICENSE.txt",
     "static/media/approval_menu.f8f837cc.svg": "/homework/static/media/approval_menu.f8f837cc.svg",
     "static/media/assign_icon.746f9511.svg": "/homework/static/media/assign_icon.746f9511.svg",
@@ -36,7 +36,7 @@
     "static/js/runtime-main.34e697db.js",
     "static/css/2.feeebe11.chunk.css",
     "static/js/2.04fb9d6a.chunk.js",
-    "static/css/main.f0bfa2fd.chunk.css",
+    "static/css/main.a1bd201b.chunk.css",
     "static/js/main.bdaf7294.chunk.js"
   ]
 }
