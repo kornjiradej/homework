@@ -175,8 +175,8 @@ const Home = (props) => {
                       setDaySelected(data)
                     }}
                      >
-                      <div style={styleUnSelectDay}>
-                        <span>{data}</span> 
+                      <div style={styleUnSelectDay}> 
+                        <span className={data > parseInt(toDay) ? styles.future : null}>{data}</span>
                       </div>
                     </div>
                       } 
