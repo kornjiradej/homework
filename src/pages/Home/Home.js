@@ -204,7 +204,7 @@ const Home = (props) => {
               // ref={(node) => setCarousel(node)} 
               slidesToScroll={7}
               slidesToShow={7}
-              swipeToSlide={true}
+              // swipeToSlide={true}
               dots={false}
               // draggable={true}
               infinite={false} 
