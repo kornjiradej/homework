@@ -59,13 +59,13 @@ const Home = (props) => {
       } 
       setMonth([...month]) 
     }
-    if(carousel && toDay && !subScribeDidMount) {
-      carousel.goTo(toDay)
+    if(toDay && !subScribeDidMount) {
+      // carousel.goTo(toDay)
       getDaysArrayByMonth()
       setSubScribeDidMount(true)
     } 
     
-  },[carousel, month, subScribeDidMount, toDay])
+  },[month, subScribeDidMount, toDay])
   const onChangeTab = (key) => {  
     if(key !== 3) {
       setDataType(key)
@@ -137,11 +137,14 @@ const Home = (props) => {
             <div className={styles.carousel_container}>
               <Carousel
                 ref={(node) => { 
+                  // carousel.goTo(toDay)
+                  console.log('node ',node)
+                  // node.goTo(toDay)
                   setCarousel(node)
                 }} 
                 slidesToScroll={7}
                 slidesToShow={7}
-                swipeToSlide={true}
+                // swipeToSlide={true}
                 dots={false}
                 draggable={true}
                 infinite={false} 
@@ -198,14 +201,12 @@ const Home = (props) => {
           </div>
           <div className={styles.carousel_container}>
             <Carousel
-              ref={(node) => { 
-                setCarousel(node)
-              }} 
+              // ref={(node) => setCarousel(node)} 
               slidesToScroll={7}
               slidesToShow={7}
               swipeToSlide={true}
               dots={false}
-              draggable={true}
+              // draggable={true}
               infinite={false} 
             >
               {month.map((data, i) => {  
